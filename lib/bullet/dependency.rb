@@ -11,28 +11,7 @@ module Bullet
     end
 
     def active_record_version
-      @active_record_version ||=
-        begin
-          if active_record40?
-            'active_record4'
-          elsif active_record41?
-            'active_record41'
-          elsif active_record42?
-            'active_record42'
-          elsif active_record50?
-            'active_record5'
-          elsif active_record51?
-            'active_record5'
-          elsif active_record52?
-            'active_record52'
-          elsif active_record60?
-            'active_record60'
-          elsif active_record61?
-            'active_record61'
-          else
-            raise "Bullet does not support active_record #{::ActiveRecord::VERSION::STRING} yet"
-          end
-        end
+      @active_record_version ||= 'active_record61'
     end
 
     def mongoid_version
